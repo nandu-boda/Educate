@@ -25,11 +25,11 @@ const Navbar = () => {
             <h1>Educate</h1>
           
             <ul>
-                <li>Home</li>
-                <li>Program</li>
-                <li>About</li>
-                <li>Campus</li>
-                <li>Testimonials</li>
+                <li><link to = "Home" offset = {0} smooth = {true} duration={500}/>Home</li>
+                <li><link to = "Home" offset = {0} smooth = {true} duration={500}/>Program</li>
+                <li><link to = "Home" offset = {0} smooth = {true} duration={500}/>About</li>
+                <li><link to = "Home" offset = {0} smooth = {true} duration={500}/>Campus</li>
+                <li><link to = "Home" offset = {0} smooth = {true} duration={500}/>Testimonials</li>
                 <li>
                     <button className='btn'>Contact Us</button>
                 </li>
