@@ -14,3 +14,12 @@
     display: inline-block;
     
 }
+@media (max-width:600px) {
+    .footer {
+        display: block;
+        text-align: center;
+    }
+    .footer ul li {
+        margin-top: 10px;
+    }
+}

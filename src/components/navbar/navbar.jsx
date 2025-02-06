@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './navbar.css';
+import { Link } from 'react-scroll';
+import Menu_icon from '../../../public/more.png';
 
 const Navbar = () => {
     const [sticky, setSticky] = useState(false);
-
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -19,21 +20,29 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    const [mobileMenu,setMobileMenu] = useState(false);
+    const toggleMenu = () => {
+        mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
 
+    }
     return (
         <nav className={`container ${sticky ? 'sticky' : ''}`}>
             <h1>Educate</h1>
           
-            <ul>
-                <li><link to = "hero" offset = {0} smooth = {true} duration={500}>Home</link></li>
-                <li><link to = "program" offset = {0} smooth = {true} duration={500}>Program</link></li>
-                <li><link to = "about" offset = {0} smooth = {true} duration={500}>About</link></li>
-                <li><link to = "campus" offset = {0} smooth = {true} duration={500}>Campus</link></li>
-                <li><link to = "testimonials" offset = {0} smooth = {true} duration={500}>Testimonials</link></li>
+            <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
+                <li><Link to='hero' smooth = {true} offset={-260} duration={500}>Home</Link></li>
+                <li><Link to='program' smooth = {true} offset={-260} duration={500}>Program</Link></li>
+                <li><Link to='about' smooth = {true} offset={-150} duration={500}>About</Link></li>
+                <li><Link to='campus'smooth = {true} offset={-260} duration={500}>Campus</Link></li>
+                <li><Link to='testimonials' smooth = {true} offset={-260} duration={500} >Testimonials</Link></li>
                 <li>
-                    <button className='btn'>Contact Us</button>
+                    <Link to='contact' smooth = {true} offset={0} duration= {500} className='btn'>Contact Us</Link>
                 </li>
+               
+          
+                
             </ul>
+            <img src={Menu_icon} alt="" className='menu_icon'onClick={toggleMenu}/>
         </nav>
     );
 };
