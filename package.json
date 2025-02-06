@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "vite"
+    
   },
   "dependencies": {
     "react": "^18.3.1",

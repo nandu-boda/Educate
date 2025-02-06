@@ -37,7 +37,7 @@ const ContactUs = () => {
                       and suggestions are important to us as we strive to provide exceptional service to our university community.
                       </p>
                 <ul>
-                    <li><img src="/public/mail.png" alt="" />Contact@GreatStack.dev</li>
+                    <li><img src="/public/mail.png" alt="" />Contact@Educate.dev</li>
                     <li><img src="/public/call.png" alt="" />+1 123-456-7890</li>
                     <li><img src="/public/loc.png" alt="" />77 Massachusetts Ave, Cambridge <br/> MA 02139, United States
                     </li>
